@@ -29,7 +29,7 @@ export const playEven = (playerName) => {
     if (answer === expectedAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`"${answer}" is wrong answer; (. Correct answer was "${expectedAnswer}"\nLet's try dagain, ${playerName}!`);
+      console.log(`"${answer}" is wrong answer; (. Correct answer was "${expectedAnswer}"\nLet's try again, ${playerName}!`);
       return;
     }
   }
