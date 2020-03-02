@@ -1,14 +1,14 @@
 name: CI
 
 on:
-  push:
-    branches:
-      - master
+  - push
 
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Lint
-      run: make lint
+    - name: install & lint
+      run: |
+        make install
+        make lint
