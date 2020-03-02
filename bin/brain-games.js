@@ -1,3 +1,7 @@
 #!/usr/bin/env node
 
-console.log('Welcome to the Brain Games!')
+import { greet } from "../src/index.js"
+
+console.log('Welcome to the Brain Games!\n')
+
+greet()
