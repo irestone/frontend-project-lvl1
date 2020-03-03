@@ -10,8 +10,11 @@ const isEven = (n) => n % 2 === 0;
 
 const genQuestionAndAnswerPair = () => {
   const randomNumber = _.random(MIN_NUMBER, MAX_NUMBER);
-  const expectedAnswer = isEven(randomNumber) ? TRUE_ANSWER : FALSE_ANSWER;
-  return [randomNumber, expectedAnswer];
+
+  const question = randomNumber.toString();
+  const answer = isEven(randomNumber) ? TRUE_ANSWER : FALSE_ANSWER;
+
+  return [question, answer];
 };
 
 const even = {

@@ -9,23 +9,18 @@ const operations = {
   '*': (a, b) => a * b,
 };
 
-const genRandomExpression = () => {
+const genQuestionAndAnswerPair = () => {
   const a = _.random(MIN_NUMBER, MAX_NUMBER);
   const b = _.random(MIN_NUMBER, MAX_NUMBER);
+
   const operators = Object.keys(operations);
   const operator = operators[_.random(0, operators.length - 1)];
-  return `${a} ${operator} ${b}`;
-};
+  const calculate = operations[operator];
 
-const evaluateExpression = (expression) => {
-  const [a, operator, b] = expression.split(' ');
-  return operations[operator](+a, +b);
-};
+  const question = `${a} ${operator} ${b}`;
+  const answer = calculate(a, b).toString();
 
-const genQuestionAndAnswerPair = () => {
-  const expression = genRandomExpression();
-  const expectedAnswer = evaluateExpression(expression).toString();
-  return [expression, expectedAnswer];
+  return [question, answer];
 };
 
 const calc = {

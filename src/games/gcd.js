@@ -7,9 +7,11 @@ const MAX_NUMBER = 99;
 const genQuestionAndAnswerPair = () => {
   const a = _.random(MIN_NUMBER, MAX_NUMBER);
   const b = _.random(MIN_NUMBER, MAX_NUMBER);
-  const numberPair = `${a} ${b}`;
-  const expectedAnswer = gcdFn(a, b).toString();
-  return [numberPair, expectedAnswer];
+
+  const question = `${a} ${b}`;
+  const answer = gcdFn(a, b).toString();
+
+  return [question, answer];
 };
 
 const gcd = {
