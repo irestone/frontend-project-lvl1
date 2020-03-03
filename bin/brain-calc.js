@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { greet, play } from '../src/index.js';
-import even from '../src/games/even.js';
+import calc from '../src/games/calc.js';
 
 const player = greet();
-play(even, player);
+play(calc, player);
