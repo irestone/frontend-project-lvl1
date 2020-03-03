@@ -33,9 +33,9 @@ const genQuestionAndAnswerPair = () => {
   return [question, answer];
 };
 
-const progression = {
+const game = {
   rules: 'What number is missing in the progression?',
   genQuestionAndAnswerPair,
 };
 
-export default progression;
+export default game;

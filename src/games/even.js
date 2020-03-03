@@ -17,9 +17,9 @@ const genQuestionAndAnswerPair = () => {
   return [question, answer];
 };
 
-const even = {
+const game = {
   rules: `Answer "${TRUE_ANSWER}" if the number is even, otherwise answer "${FALSE_ANSWER}".`,
   genQuestionAndAnswerPair,
 };
 
-export default even;
+export default game;

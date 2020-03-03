@@ -23,9 +23,9 @@ const genQuestionAndAnswerPair = () => {
   return [question, answer];
 };
 
-const calc = {
+const game = {
   rules: 'What is the result of the expression?',
   genQuestionAndAnswerPair,
 };
 
-export default calc;
+export default game;

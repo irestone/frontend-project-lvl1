@@ -21,8 +21,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "gcd": "0.0.1",
-    "isprime": "0.0.2",
     "lodash": "^4.17.15",
     "readline-sync": "^1.4.10"
   },

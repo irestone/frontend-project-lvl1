@@ -1,22 +1,23 @@
 import _ from 'lodash';
-import gcdFn from 'gcd';
 
 const MIN_NUMBER = 2;
 const MAX_NUMBER = 99;
+
+const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
 
 const genQuestionAndAnswerPair = () => {
   const a = _.random(MIN_NUMBER, MAX_NUMBER);
   const b = _.random(MIN_NUMBER, MAX_NUMBER);
 
   const question = `${a} ${b}`;
-  const answer = gcdFn(a, b).toString();
+  const answer = gcd(a, b).toString();
 
   return [question, answer];
 };
 
-const gcd = {
+const game = {
   rules: 'Find the greatest common divisor of given numbers.',
   genQuestionAndAnswerPair,
 };
 
-export default gcd;
+export default game;
