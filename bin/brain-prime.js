@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
-import { greet, play } from '../src/index.js';
+import { greet } from '../src/index.js';
+import { run } from '../src/engine.js';
 import prime from '../src/games/prime.js';
 
 const player = greet();
-play(prime, player);
+
+run(prime, player);
