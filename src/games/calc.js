@@ -1,6 +1,5 @@
 import _ from 'lodash';
 
-const MIN_NUMBER = 0;
 const MAX_NUMBER = 99;
 
 const operations = {
@@ -10,11 +9,9 @@ const operations = {
 };
 
 const genQuestionAndAnswerPair = () => {
-  const a = _.random(MIN_NUMBER, MAX_NUMBER);
-  const b = _.random(MIN_NUMBER, MAX_NUMBER);
-
-  const operators = Object.keys(operations);
-  const operator = operators[_.random(0, operators.length - 1)];
+  const a = _.random(MAX_NUMBER);
+  const b = _.random(MAX_NUMBER);
+  const operator = _.sample(Object.keys(operations));
   const calculate = operations[operator];
 
   const question = `${a} ${operator} ${b}`;
