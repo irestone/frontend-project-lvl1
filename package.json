@@ -1,12 +1,21 @@
 {
   "name": "@irestone/hexlet-frontend-project-lvl1",
   "version": "1.0.0",
-  "description": "",
   "license": "ISC",
+  "author": "Khan Bifov",
+  "description": "Hexlet's Frontend JS first module training project",
+  "keywords": [
+    "game",
+    "math"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/irestone/frontend-project-lvl1.git"
   },
+  "bugs": {
+    "url": "https://github.com/irestone/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/irestone/frontend-project-lvl1#readme",
   "type": "module",
   "main": "src/index.js",
   "bin": {
