@@ -2,6 +2,9 @@ export const findGCD = (a, b) => (b === 0 ? a : findGCD(b, a % b));
 
 export const isEven = (n) => n % 2 === 0;
 
+/**
+ * An algorithm's taken from here (Optimized School Method) https://www.geeksforgeeks.org/primality-test-set-1-introduction-and-school-method/
+ */
 export const isPrime = (n) => {
   // Corner cases
 
