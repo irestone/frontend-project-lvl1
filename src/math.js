@@ -1,5 +1,3 @@
-export const findGCD = (a, b) => (b === 0 ? a : findGCD(b, a % b));
-
 export const isEven = (n) => n % 2 === 0;
 
 /**
@@ -32,7 +30,15 @@ export const isPrime = (n) => {
   return true;
 };
 
-export const genProgression = (start, step, length) => {
+/**
+ * Finds greatest common divisor
+ */
+export const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
+
+/**
+ * Produces arithmetic progression
+ */
+export const ap = (start, step, length) => {
   const result = [];
 
   for (let i = 0; i < length; i += 1) {

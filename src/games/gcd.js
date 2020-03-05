@@ -1,16 +1,13 @@
 import _ from 'lodash';
 
-import { findGCD } from '../utils/math.js';
-
-const MIN_NUMBER = 2;
-const MAX_NUMBER = 99;
+import { gcd } from '../math.js';
 
 const genQuestionAndAnswerPair = () => {
-  const a = _.random(MIN_NUMBER, MAX_NUMBER);
-  const b = _.random(MIN_NUMBER, MAX_NUMBER);
+  const a = _.random(2, 99);
+  const b = _.random(2, 99);
 
   const question = `${a} ${b}`;
-  const answer = findGCD(a, b).toString();
+  const answer = gcd(a, b).toString();
 
   return [question, answer];
 };

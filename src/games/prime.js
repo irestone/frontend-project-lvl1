@@ -1,14 +1,12 @@
 import _ from 'lodash';
 
-import { isPrime } from '../utils/math.js';
+import { isPrime } from '../math.js';
 
 const TRUE_ANSWER = 'yes';
 const FALSE_ANSWER = 'no';
-const MIN_NUMBER = 2;
-const MAX_NUMBER = 200;
 
 const genQuestionAndAnswerPair = () => {
-  const randomNumber = _.random(MIN_NUMBER, MAX_NUMBER);
+  const randomNumber = _.random(2, 200);
 
   const question = randomNumber.toString();
   const answer = isPrime(randomNumber) ? TRUE_ANSWER : FALSE_ANSWER;

@@ -1,14 +1,12 @@
 import _ from 'lodash';
 
-import { isEven } from '../utils/math.js';
+import { isEven } from '../math.js';
 
 const TRUE_ANSWER = 'yes';
 const FALSE_ANSWER = 'no';
-const MIN_NUMBER = -999;
-const MAX_NUMBER = 999;
 
 const genQuestionAndAnswerPair = () => {
-  const randomNumber = _.random(MIN_NUMBER, MAX_NUMBER);
+  const randomNumber = _.random(-999, 999);
 
   const question = randomNumber.toString();
   const answer = isEven(randomNumber) ? TRUE_ANSWER : FALSE_ANSWER;
