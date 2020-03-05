@@ -3,6 +3,8 @@ export const findGCD = (a, b) => (b === 0 ? a : findGCD(b, a % b));
 export const isEven = (n) => n % 2 === 0;
 
 export const isPrime = (n) => {
+  // Corner cases
+
   if (n <= 1) {
     return false;
   }
@@ -10,6 +12,9 @@ export const isPrime = (n) => {
   if (n <= 3) {
     return true;
   }
+
+  // This is checked so that we can skip
+  // middle five numbers in below loop
 
   if (n % 2 === 0 || n % 3 === 0) {
     return false;
@@ -24,12 +29,12 @@ export const isPrime = (n) => {
   return true;
 };
 
-export const genProgression = (a1, d, length) => {
+export const genProgression = (start, step, length) => {
   const result = [];
 
-  for (let n = 1; n <= length; n += 1) {
-    const an = a1 + (n - 1) * d;
-    result.push(an);
+  for (let i = 0; i < length; i += 1) {
+    const member = start + i * step;
+    result.push(member);
   }
 
   return result;

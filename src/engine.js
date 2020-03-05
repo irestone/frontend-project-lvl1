@@ -5,7 +5,7 @@ const ROUNDS_COUNT = 3;
 export const run = ({ rules, genQuestionAndAnswerPair }, player) => {
   console.log(rules);
 
-  for (let i = 1; i <= ROUNDS_COUNT; i += 1) {
+  for (let i = 0; i < ROUNDS_COUNT; i += 1) {
     const [question, expectedAnswer] = genQuestionAndAnswerPair();
 
     console.log(`Question: ${question}`);
