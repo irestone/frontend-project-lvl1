@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 import { gcd } from '../math.js';
 
-const genRoundData = () => {
+const genRound = () => {
   const a = _.random(2, 99);
   const b = _.random(2, 99);
 
@@ -14,7 +14,7 @@ const genRoundData = () => {
 
 const game = {
   description: 'Find the greatest common divisor of given numbers.',
-  genRoundData,
+  genRound,
 };
 
 export default game;

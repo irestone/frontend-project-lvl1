@@ -2,22 +2,21 @@ import _ from 'lodash';
 
 import { arithmeticProgression } from '../math.js';
 
-const genRoundData = () => {
+const genRound = () => {
   const start = _.random(-99, 99);
   const step = _.random(2, 20);
   const progression = arithmeticProgression(start, step, 10);
-  const indexOfPulledMemberInProgression = _.random(progression.length - 1);
-  const progressionWithPulledMember = progression.map((n, i) => (i === indexOfPulledMemberInProgression ? '..' : n));
+  const hiddenElementIndex = _.random(progression.length - 1);
 
-  const question = progressionWithPulledMember.join(' ');
-  const answer = progression[indexOfPulledMemberInProgression].toString();
+  const question = progression.map((n, i) => (i === hiddenElementIndex ? '..' : n)).join(' ');
+  const answer = progression[hiddenElementIndex].toString();
 
   return [question, answer];
 };
 
 const game = {
   description: 'What number is missing in the progression?',
-  genRoundData,
+  genRound,
 };
 
 export default game;

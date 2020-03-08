@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 import { isEven } from '../math.js';
 
-const genRoundData = () => {
+const genRound = () => {
   const randomNumber = _.random(-999, 999);
 
   const question = randomNumber.toString();
@@ -13,7 +13,7 @@ const genRoundData = () => {
 
 const game = {
   description: 'Answer "yes" if the number is even, otherwise answer "no".',
-  genRoundData,
+  genRound,
 };
 
 export default game;
