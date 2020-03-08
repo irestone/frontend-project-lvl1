@@ -17,6 +17,7 @@ const run = ({ description, genRound }) => {
     if (actualAnswer !== expectedAnswer) {
       console.log(`"${actualAnswer}" is wrong answer; (. Correct answer was "${expectedAnswer}"`);
       console.log(`Let's try again, ${playerName}!`);
+      return;
     }
 
     console.log('Correct!');
