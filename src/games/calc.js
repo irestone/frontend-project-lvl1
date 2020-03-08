@@ -6,7 +6,7 @@ const operations = {
   '*': (a, b) => a * b,
 };
 
-const genQuestionAndAnswerPair = () => {
+const genRoundData = () => {
   const a = _.random(99);
   const b = _.random(99);
   const operator = _.sample(Object.keys(operations));
@@ -19,8 +19,8 @@ const genQuestionAndAnswerPair = () => {
 };
 
 const game = {
-  rules: 'What is the result of the expression?',
-  genQuestionAndAnswerPair,
+  description: 'What is the result of the expression?',
+  genRoundData,
 };
 
 export default game;

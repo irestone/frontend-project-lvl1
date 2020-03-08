@@ -1,23 +1,23 @@
 import _ from 'lodash';
 
-import { ap } from '../math.js';
+import { arithmeticProgression } from '../math.js';
 
-const genQuestionAndAnswerPair = () => {
+const genRoundData = () => {
   const start = _.random(-99, 99);
   const step = _.random(2, 20);
-  const progression = ap(start, step, 10);
-  const pullIndex = _.random(progression.length - 1);
-  const pulledMember = progression[pullIndex];
+  const progression = arithmeticProgression(start, step, 10);
+  const indexOfPulledMemberInProgression = _.random(progression.length - 1);
+  const progressionWithPulledMember = progression.map((n, i) => (i === indexOfPulledMemberInProgression ? '..' : n));
 
-  const question = progression.reduce((acc, n, i) => `${acc} ${i === pullIndex ? '..' : n}`, '');
-  const answer = pulledMember.toString();
+  const question = progressionWithPulledMember.join(' ');
+  const answer = progression[indexOfPulledMemberInProgression].toString();
 
   return [question, answer];
 };
 
 const game = {
-  rules: 'What number is missing in the progression?',
-  genQuestionAndAnswerPair,
+  description: 'What number is missing in the progression?',
+  genRoundData,
 };
 
 export default game;

@@ -35,16 +35,13 @@ export const isPrime = (n) => {
  */
 export const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
 
-/**
- * Produces arithmetic progression
- */
-export const ap = (start, step, length) => {
-  const result = [];
+export const arithmeticProgression = (start, step, length) => {
+  const progression = [];
 
   for (let i = 0; i < length; i += 1) {
     const member = start + i * step;
-    result.push(member);
+    progression.push(member);
   }
 
-  return result;
+  return progression;
 };
