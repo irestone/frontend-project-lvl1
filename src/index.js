@@ -8,7 +8,9 @@ const run = ({ description, genRound }) => {
 
   console.log(description);
 
-  for (let i = 0; i < 3; i += 1) {
+  const roundsCount = 3;
+
+  for (let i = 0; i < roundsCount; i += 1) {
     const [question, expectedAnswer] = genRound();
 
     console.log(`Question: ${question}`);
